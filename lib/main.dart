@@ -13,8 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-     int _selectedIndex = 0;
-     
+  
     return MaterialApp(
       title: 'Flutter Demo',
       home: Scaffold(
@@ -48,13 +47,71 @@ class MyApp extends StatelessWidget {
           ),
         ),
         backgroundColor: Colors.lightBlue.shade900,
-       /*body: Container(
+        body: Column(
+            children: [
+              Container(
+          margin: const EdgeInsets.fromLTRB(20 , 20, 20, 20),
+          decoration: const BoxDecoration(
+            borderRadius:  BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+              bottomLeft: Radius.circular(30),
+              bottomRight: Radius.circular(30),
+              ),
+            color: Colors.white
+            ),
           width: 500,
-          color: Colors.white,
-        ),*/
+          height: 400,
+               ),
+               Container(
+                 decoration: const BoxDecoration(
+            borderRadius:  BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+              ),
+            color: Colors.white
+            ),
+            padding: const EdgeInsets.fromLTRB(0, 0, 15, 0),
+                  width: 500,
+                  height: 85,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        color: Colors.lightBlue.shade900,
+                        icon: const Icon(
+                          Icons.arrow_left,
+                          size: 50,
+                          ),
+                        onPressed: (){}
+                        ),
+                        IconButton(
+                          color: Colors.lightBlue.shade900,
+                        icon: const Icon(
+                          Icons.play_circle,
+                          size: 50,
+                          ),
+                        onPressed: (){}
+                        ),
+                        IconButton(
+                          color: Colors.lightBlue.shade900,
+                        icon: const Icon(
+                          Icons.arrow_right,
+                          size: 50,
+                          ),
+                        onPressed: (){}
+                        ),
+                    ],
+                  ),
+               ),
+          ],
+
+
+        ),
+        
         bottomNavigationBar: BottomNavigationBar(
           elevation: 0,
-          backgroundColor: Colors.transparent,
+          
           items: [
             BottomNavigationBarItem(
               icon: IconButton(
@@ -80,7 +137,7 @@ class MyApp extends StatelessWidget {
               
             ),
           ],
-          unselectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey.shade800,
         ),
       ),
     );
