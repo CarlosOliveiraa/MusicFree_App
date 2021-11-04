@@ -18,24 +18,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       home: Scaffold(
         appBar: AppBar(
-          actions: [
-            Row(
-              children: [
-                IconButton(
-                  icon: const Icon(Icons.add_alert_sharp),
-                  onPressed:(){}
-                  ),
-                  IconButton(
-                  icon: const Icon(Icons.refresh_sharp),
-                  onPressed:(){}
-                  ),
-                  IconButton(
-                  icon: const Icon(Icons.settings),
-                  onPressed:(){}
-                  ),
-              ],
-            )
-          ],
           elevation: 0,
           backgroundColor: Colors.lightBlue.shade900,
           title: const Text(
@@ -60,6 +42,7 @@ class MyApp extends StatelessWidget {
               ),
             color: Colors.white
             ),
+            
           width: 500,
           height: 400,
                ),
@@ -71,35 +54,44 @@ class MyApp extends StatelessWidget {
               ),
             color: Colors.white
             ),
-            padding: const EdgeInsets.fromLTRB(0, 0, 15, 0),
+             padding: const EdgeInsets.fromLTRB(80, 10, 120, 50),
                   width: 500,
-                  height: 85,
+                  height: 163,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       IconButton(
                         color: Colors.lightBlue.shade900,
                         icon: const Icon(
                           Icons.arrow_left,
-                          size: 50,
+                          size: 80,
                           ),
-                        onPressed: (){}
+                        onPressed: (){
+                         
+                        }
                         ),
+                        const Spacer(flex: 1,),
                         IconButton(
                           color: Colors.lightBlue.shade900,
                         icon: const Icon(
                           Icons.play_circle,
-                          size: 50,
+                          size: 80,
                           ),
-                        onPressed: (){}
+                        onPressed: (){
+                         
+                        }
                         ),
+                        Spacer(),
                         IconButton(
                           color: Colors.lightBlue.shade900,
                         icon: const Icon(
                           Icons.arrow_right,
-                          size: 50,
+                          size: 80,
                           ),
-                        onPressed: (){}
+                        onPressed: (){
+                          
+                        }
                         ),
                     ],
                   ),
@@ -107,37 +99,6 @@ class MyApp extends StatelessWidget {
           ],
 
 
-        ),
-        
-        bottomNavigationBar: BottomNavigationBar(
-          elevation: 0,
-          
-          items: [
-            BottomNavigationBarItem(
-              icon: IconButton(
-                icon: const Icon(Icons.home),
-                onPressed: (){}
-              ),
-              label: "Início",
-            ),
-            BottomNavigationBarItem(
-              icon: IconButton(
-                icon: const Icon(Icons.search_outlined),
-                onPressed: (){}
-              ),
-              label: "Pesquisar",
-              
-            ),
-            BottomNavigationBarItem(
-              icon: IconButton(
-                icon: const Icon(Icons.library_music_outlined),
-                onPressed: (){}
-              ),
-              label: "Biblioteca",
-              
-            ),
-          ],
-          unselectedItemColor: Colors.grey.shade800,
         ),
       ),
     );
